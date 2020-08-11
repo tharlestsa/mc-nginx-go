@@ -13,4 +13,4 @@ RUN chown -R www-data. /var/www/* && chmod -R ugo+w /var/www/*
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-CMD ["nginx", "-g", "daemon off;"]
+#CMD ["nginx", "-g", "daemon off;"]
