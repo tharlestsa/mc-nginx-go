@@ -10,9 +10,5 @@
 
 #!/bin/bash
 set -e
-FASTCGI_HOSTNAME="${MAPAS_HOSTNAME:-mapasculturais}"
-FASTCGI_PORT="${MAPAS_PORT:-9000}"
-
-sed -i "s/mapasculturais\:9000/$FASTCGI_HOSTNAME\:$FASTCGI_PORT/g" /etc/nginx/conf.d/default.conf
 
 service nginx start

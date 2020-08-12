@@ -20,10 +20,4 @@
 
 FROM nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-RUN mkdir -p /var/www/html && chown -R www-data. /var/www/* && chmod -R ugo+w /var/www/* && chmod ugo+w /etc/nginx/conf.d/default.conf
-
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+RUN mkdir -p /var/www/html && chown -R www-data. /var/www/* && chmod -R ugo+w /var/www/*
