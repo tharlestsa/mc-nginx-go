@@ -21,3 +21,4 @@
 FROM nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 RUN mkdir -p /var/www/html && chown -R www-data. /var/www/* && chmod -R ugo+w /var/www/*
+RUN chmod -R 777 /var/cache/nginx
